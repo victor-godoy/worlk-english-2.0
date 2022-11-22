@@ -62,12 +62,38 @@ body {
   display: grid;
   max-width: 1000px;
 }
+@media (max-width: 1000px) {
+  .title {
+    text-align: center;
+    padding: 40px 0 20px 0;
+  }
+}
 /* apresentacao*/
 .apresentacao {
   max-width: 1000px;
   margin: 60px auto;
   display: grid;
-  grid-template-columns: 380px 1fr;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+}
+@media (max-width: 1000px) {
+  .apresentacao-content {
+    grid-template-columns: 1fr;
+  }
+  .apresentacao img {
+    margin: 0 auto;
+    max-width: 380px;
+  }
+  .apresentacao-info {
+    padding: 20px 0 20px 0;
+  }
+  .apresentacao-info p {
+    text-align: center;
+    justify-content: center;
+  }
+  .maquina {
+    margin: 0 auto;
+  }
 }
 .apresentacao img {
   border-radius: 10px;
@@ -83,6 +109,7 @@ body {
   text-align: left;
   color: #8f9ba8;
   margin: 0 30px;
+  flex-wrap: wrap;
 }
 .maquina {
   border-right: 2px solid rgba(255, 255, 255, 0.75);
@@ -201,15 +228,25 @@ body {
 }
 .era__web__evolucao {
   /* background: #4b95ef05; */
-  margin-top: 60px;
   flex-wrap: wrap;
   /* background: #a8bfd6e4; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+@media (max-width: 1000px) {
+  .era__web__evolucao {
+    display: block;
+    padding: 20px 0 20px 0;
+  }
+  .era__web__container:nth-child(even) {
+    background: rgba(255, 235, 235, 0.258);
+  }
+}
+
 .era__web__container {
   padding: 20px;
   margin: 20px 20px;
+  flex-wrap: wrap;
 }
 .item-5 {
   grid-column: 1 / 5;
@@ -254,6 +291,11 @@ ul {
 .slide-wrapper {
   overflow: hidden;
   height: 600px;
+}
+@media (max-width: 1000px) {
+  .slide-wrapper {
+    height: 450px;
+  }
 }
 
 .slide {
@@ -343,7 +385,7 @@ ul {
   color: white;
   width: 40px;
   height: 40px;
-  background: #fb5 url("./img/arrow.svg") center center no-repeat;
+  background: #fb5 url("../img/arrow.svg") center center no-repeat;
 }
 
 .arrow-nav button.prev {
@@ -380,6 +422,12 @@ ul {
   color: #8f9ba8;
   margin: 5px 20px;
   padding: 20px;
+}
+@media (max-width: 1000px) {
+  .footer-nav ul li {
+    margin: 15px;
+    text-align: center;
+  }
 }
 
 .footer-nav ul a:hover {
